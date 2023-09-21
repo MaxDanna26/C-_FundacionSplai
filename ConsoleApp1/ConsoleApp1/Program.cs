@@ -11,16 +11,130 @@ namespace ConsoleApp1{
     {
         public static void Main(string[] args)
         {
-            //Console.WriteLine("Bienvenido usuario!");
-            //Console.WriteLine("Que deseas hacer?");
-            //Console.WriteLine("NIVEL 1");
-            //Console.WriteLine("NIVEL 2");
-            //Console.WriteLine("NIVEL 3");
-            //int opcion = int.Parse(Console.ReadLine());
-            //Console.WriteLine(opcion);
+            mostrarMenu();
 
-            Ejercicio19();
             Console.ReadKey();
+        }
+
+        public static void mostrarMenu()
+        {
+            string opcion;
+
+            do
+            {
+
+                Console.WriteLine("Bienvenido usuario!");
+                Console.WriteLine("Seleccione la opcion que desea: ");
+                Console.WriteLine("Bienvenido usuario!");
+                Console.WriteLine("Que deseas hacer?");
+                Console.WriteLine("1. NIVEL 1");
+                Console.WriteLine("2. NIVEL 2");
+                Console.WriteLine("3. NIVEL 3");
+                Console.WriteLine("0. SALIR!");
+                opcion = Console.ReadLine();
+
+                switch (opcion)
+                {
+                    case "1": Nivel1(); Console.ReadKey(); Console.Clear(); break;
+                    case "2": Nivel2(); Console.ReadKey(); Console.Clear(); break;
+                    case "3": Nivel3(); Console.ReadKey(); Console.Clear(); break;
+                    case "0": return;
+                    default: break;
+                }
+
+            } while (opcion != "0");
+
+        }
+
+        public static void Nivel1() 
+        {
+            string opcion;
+
+            Console.WriteLine("Nivel 1: Elige un ejercicio: ");
+
+            Console.WriteLine("1. Suma, resta, multi y divi.");
+            Console.WriteLine("2. Variables N,A y C");
+            Console.WriteLine("3. Variables N,X,Y y M");
+            Console.WriteLine("4. Manipular N");
+            Console.WriteLine("5. Cambio de valores");
+            Console.WriteLine("0. Salir");
+            opcion = Console.ReadLine();
+
+            switch (opcion)
+            {
+                case "1": Ejercicio1(); Console.ReadKey(); Console.Clear(); break;
+                case "2": Ejercicio2(); Console.ReadKey(); Console.Clear(); break;
+                case "3": Ejercicio3(); Console.ReadKey(); Console.Clear(); break;
+                case "4": Ejercicio4(); Console.ReadKey(); Console.Clear(); break;
+                case "5": Ejercicio5(); Console.ReadKey(); Console.Clear(); break;
+                case "0": return;
+                default: break;
+            }
+        }
+        public static void Nivel2() 
+        {
+            string opcion;
+
+            Console.WriteLine("Nivel 2: Elige un ejercicio: ");
+
+            Console.WriteLine("1. Suma total de variables");
+            Console.WriteLine("2. Nombre y ciudad");
+            Console.WriteLine("3. Nombre y edad");
+            Console.WriteLine("4. Cual es el mayor? ");
+            Console.WriteLine("5. Es fin de semana o no? ");
+            Console.WriteLine("6. Efectivo o tarjeta?");
+            Console.WriteLine("7. De 0 a 100 - bucle for");
+            Console.WriteLine("8. De 0 a 100 - bucle while");
+            Console.WriteLine("9. De 0 a 100 - Muestra pares");
+            Console.WriteLine("10. De 0 a 100 - Muestra pares y divisibles por 3");
+            Console.WriteLine("11. Variables numericas, son iguales? ");
+            Console.WriteLine("12. Numero divisible entre 2");
+            Console.WriteLine("13. Precio del IVA");
+            Console.WriteLine("14. Ventas del vendedor");
+
+            Console.WriteLine("0. Salir");
+            opcion = Console.ReadLine();
+
+            switch (opcion)
+            {
+                case "1": Ejercicio6(); Console.ReadKey(); Console.Clear(); break;
+                case "2": Ejercicio7(); Console.ReadKey(); Console.Clear(); break;
+                case "3": Ejercicio8(); Console.ReadKey(); Console.Clear(); break;
+                case "4": Ejercicio9(); Console.ReadKey(); Console.Clear(); break;
+                case "5": Ejercicio10(); Console.ReadKey(); Console.Clear(); break;
+                case "6": Ejercicio11(); Console.ReadKey(); Console.Clear(); break;
+                case "7": Ejercicio12(); Console.ReadKey(); Console.Clear(); break;
+                case "8": Ejercicio13(); Console.ReadKey(); Console.Clear(); break;
+                case "9": Ejercicio14(); Console.ReadKey(); Console.Clear(); break;
+                case "10": Ejercicio15(); Console.ReadKey(); Console.Clear(); break;
+                case "11": Ejercicio16(10,2); Console.ReadKey(); Console.Clear(); break;
+                case "12": Ejercicio17(10); Console.ReadKey(); Console.Clear(); break;
+                case "13": Ejercicio18(); Console.ReadKey(); Console.Clear(); break;
+                case "14": Ejercicio19(); Console.ReadKey(); Console.Clear(); break;
+                case "0": return;
+                default: break;
+            }
+        }
+        public static void Nivel3()
+        {
+            string opcion;
+
+            Console.WriteLine("Nivel 3: Elige un ejercicio: ");
+
+            Console.WriteLine("1. Switch laboral");
+            Console.WriteLine("2. Contraseña");
+            Console.WriteLine("3. Calculadora inversa");
+            Console.WriteLine("0. Salir");
+            opcion = Console.ReadLine();
+
+            switch (opcion)
+            {
+                case "1": Ejercicio20(); Console.ReadKey(); Console.Clear(); break;
+                case "2": Ejercicio21(); Console.ReadKey(); Console.Clear(); break;
+                case "3": Ejercicio22(); Console.ReadKey(); Console.Clear(); break;
+                case "0": return;
+                default: break;
+            }
         }
 
         public static T Sumar<T>(T numero1, T numero2)
@@ -140,7 +254,6 @@ namespace ConsoleApp1{
             Console.WriteLine($"La diferencia de A menos N da como resultado: {resta1}");
             Console.WriteLine($"El valor numerico de la variable C es: {valorNumerico}");
         }
-
 
         static void Ejercicio3()
         {
@@ -294,7 +407,6 @@ namespace ConsoleApp1{
             }
         }
 
-
         static void Ejercicio10()
         {
             Console.Write("Ingresa el nombre de un día de la semana: ");
@@ -376,8 +488,6 @@ namespace ConsoleApp1{
 
 
         }
-
-
         static void Ejercicio16(int num1,int num2)
         {
             if(num1 == num2)
@@ -432,6 +542,105 @@ namespace ConsoleApp1{
             Console.WriteLine("El precio final de todas sus ventas es: " + precioVenta);
         }
 
+        // -------------- NIVEL 3 -------------
+        static void Ejercicio20()
+        {
+            Console.WriteLine("Bienvenido usuario ");
+            Console.WriteLine("Digame un numero de la semana: ");
+            string dayWeek = Console.ReadLine();
+
+            switch (dayWeek)
+            {
+                case "lunes": Console.WriteLine("Dia laboral."); break;
+
+                case "martes": Console.WriteLine("Dia laboral."); break;
+
+                case "miercoles": Console.WriteLine("Dia laboral."); break;
+
+                case "jueves": Console.WriteLine("Dia laboral."); break;
+
+                case "viernes": Console.WriteLine("Dia laboral."); break;
+
+                case "sabado": Console.WriteLine("Dia no laboral."); break;
+
+                case "domingo": Console.WriteLine("Dia no laboral."); break;
+
+                default: Console.WriteLine("No ha escrito un dia de la semana."); break;
+            }
+
+        }
+
+        static void Ejercicio21()
+        {
+            string contra = "dificil";
+            string password = "";
+            int intentos = 3;
+            int contador = 0;
+
+            Console.WriteLine("Bienvenido usuario");
+
+            do
+            {
+                Console.WriteLine("Marque su contraseña: ");
+                password = Console.ReadLine();
+                contador++;
+            } while (contador < intentos && password != contra);
+
+            if (password == contra) Console.WriteLine("Enhorabuena!");
+            else { Console.WriteLine("Se ha quedado sin intentos!"); }
+
+
+        }
+
+        static void Ejercicio22() 
+        {
+           Console.WriteLine("Bienvenido usuario");
+
+            Console.WriteLine("Ingrese un numero: ");
+            int numero = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("Ingrese su segundo numero: ");
+            int numero1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Que operacion desea hacer?");
+            Console.WriteLine("+");
+            Console.WriteLine("-");
+            Console.WriteLine("*");
+            Console.WriteLine("/");
+            Console.WriteLine("^");
+            Console.WriteLine("%");
+            string signo =  Console.ReadLine();
+
+            double resultado = 0;
+
+            switch (signo)
+            {
+                case "+":
+                    resultado = numero + numero1; break;
+
+                case "-":
+                    resultado = numero - numero1; break;
+
+                case "*":
+                    resultado = numero * numero1; break;
+
+                case "/": 
+                    resultado = (double)numero / numero1; break;
+
+                case "^":
+                    resultado = Math.Pow(numero, numero1); break;
+
+                case "%":
+                    resultado = numero % numero1; break;
+
+                default:
+                    Console.WriteLine("Signo aritmético no válido."); return;
+
+            }
+
+            Console.WriteLine($"El resultado de la operacion es: " + resultado);
+
+        }
 
 
     }

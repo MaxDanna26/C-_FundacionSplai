@@ -5,3 +5,10 @@ C:\Users\Maxim\OneDrive\Escritorio\.net\ConsoleApp2\ConsoleApp2\obj\Debug\Consol
 C:\Users\Maxim\OneDrive\Escritorio\.net\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
 C:\Users\Maxim\OneDrive\Escritorio\.net\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.exe
 C:\Users\Maxim\OneDrive\Escritorio\.net\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.pdb
+C:\Users\Maxim\OneDrive\Escritorio\NET\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
+C:\Users\Maxim\OneDrive\Escritorio\NET\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+C:\Users\Maxim\OneDrive\Escritorio\NET\ConsoleApp2\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+C:\Users\Maxim\OneDrive\Escritorio\NET\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.AssemblyReference.cache
+C:\Users\Maxim\OneDrive\Escritorio\NET\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.csproj.CoreCompileInputs.cache
+C:\Users\Maxim\OneDrive\Escritorio\NET\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+C:\Users\Maxim\OneDrive\Escritorio\NET\ConsoleApp2\ConsoleApp2\obj\Debug\ConsoleApp2.pdb

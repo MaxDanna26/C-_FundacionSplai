@@ -22,36 +22,43 @@ namespace ConsoleApp2
 
         public static void mostrarMenu()
         {
-            Console.WriteLine("Bienvenido usuario!");
-            Console.WriteLine("Seleccione la opcion que desea: ");
- 
-            Console.WriteLine("1. Potenciar");
-            Console.WriteLine("2. Dividir");
-            Console.WriteLine("3. Comparar fechas");
-            Console.WriteLine("4. Comparar texto");
-            Console.WriteLine("5. Inversion de texto");
-            Console.WriteLine("6. Palindromo");
-            Console.WriteLine("7. Numeros Pares");
-            Console.WriteLine("8. Invertir un numero");
 
-            int opcion = int.Parse(Console.ReadLine());
+                string opcion ;
 
-            while (opcion != 0) {
 
-                switch (opcion)
+                do
                 {
-                    case 1: Potencia(9, 0); break;
-                    case 2: Division(50, 5); break;
-                    case 3: CompararDates(); break;
-                    case 4: CompararTexto("alberto", "mabel"); break;
-                    case 5: InversionTexto("anilina"); break;
-                    case 6: Palindromo("anilina"); break;
-                    case 7: NumerosPares(); break;
-                    case 8: InvertirNumero(412); break;
-                    case 0: return;
-                    default: break;
-                }
-            }
+
+                    Console.WriteLine("Bienvenido usuario!");
+                    Console.WriteLine("Seleccione la opcion que desea: ");
+
+                    Console.WriteLine("1. Potenciar");
+                    Console.WriteLine("2. Dividir");
+                    Console.WriteLine("3. Comparar fechas");
+                    Console.WriteLine("4. Comparar texto");
+                    Console.WriteLine("5. Inversion de texto");
+                    Console.WriteLine("6. Palindromo");
+                    Console.WriteLine("7. Numeros Pares");
+                    Console.WriteLine("8. Invertir un numero");
+                    Console.WriteLine("9. Adivinanzas");
+                    Console.WriteLine("0. Salir");
+                    opcion = Console.ReadLine();
+
+                    switch (opcion)
+                    {
+                        case "1": Potencia(9, 0); Console.ReadKey(); Console.Clear(); break;
+                        case "2": Division(50, 5); Console.ReadKey(); Console.Clear(); break;
+                        case "3": CompararDates("22/10/2022", "20/09/2021"); Console.ReadKey(); Console.Clear(); break;
+                        case "4": CompararTexto("alberto", "mabel"); Console.ReadKey(); Console.Clear(); break;
+                        case "5": InversionTexto("anilina"); Console.ReadKey(); Console.Clear(); break;
+                        case "6": Palindromo("anilina"); Console.ReadKey(); Console.Clear(); break;
+                        case "7": NumerosPares(); Console.ReadKey(); Console.Clear(); break;
+                        case "8": InvertirNumero(412); Console.ReadKey(); Console.Clear(); break;
+                        case "9": Adivinanza(); Console.ReadKey(); Console.Clear(); break;
+                        case "0": return;
+                        default: break;
+                    }
+                } while (opcion != "0");
 
         }
 
@@ -66,7 +73,7 @@ namespace ConsoleApp2
                 contador++;
             }
 
-            Console.WriteLine(resultado);
+            Console.WriteLine($"El resultado es : " + resultado );
             return resultado;
         }
 
@@ -80,7 +87,7 @@ namespace ConsoleApp2
                 contador++; 
             }
 
-            Console.WriteLine(contador);
+            Console.WriteLine($"El resultado de la division es : " + contador);
             return contador;
         }
 
@@ -113,19 +120,13 @@ namespace ConsoleApp2
 
         }
 
-        public static void CompararDates()
+        public static void CompararDates(string fecha,string fecha1)
         {
-
-            //Realizar un método que aceptará dos fechas en formato string. Dependiendo de si una fecha es anterior,
-            // igual o posterior a la otra fecha, devolverá true, null o false, respectivamente.
-
-            string fecha = "22/10/2022";
             int mesFecha = 0;
             int añoFecha = 0;
             int diaFecha = 0;
             int dayfecha = 0;
 
-            string fecha1 = "20/09/2021";
             int mesFecha1 = 0;
             int añoFecha1 = 0;
             int diaFecha1 = 0;
@@ -172,7 +173,7 @@ namespace ConsoleApp2
                 letra = palabra[i-1];
                 palabra1 = palabra1 + letra;
             }
-            Console.WriteLine(palabra1);
+            Console.WriteLine($"La palabra invertida se lee: " + palabra1);
             return palabra1;
         }
 
@@ -206,13 +207,19 @@ namespace ConsoleApp2
                 Console.WriteLine("Introduzca un numero: ");
                 numeroElegido = int.Parse(Console.ReadLine());
 
-                if(numeroElegido > numeroAleatorio)
-                { Console.WriteLine("Cerca, elegiste uno mas grande.");}
-                else { Console.WriteLine("Cerca, elegiste uno mas pequeño."); }
+                if(numeroElegido == numeroAleatorio)
+                { 
+                    Console.WriteLine("Perfecto has acertado!"); }
+                else if(numeroElegido > numeroAleatorio)
+                { 
+                    Console.WriteLine("Cerca, elegiste uno mas grande.");
+                }
+                else { 
+                    Console.WriteLine("Cerca, elegiste uno mas pequeño.");
+                }
 
             } while (numeroAleatorio != numeroElegido);
 
-            Console.WriteLine("Has acertado el numero, felicitaciones!");
 
             Console.WriteLine("El numero aleatorio es "+numeroAleatorio+
             " y el numero elegido ha sido "+numeroElegido);
