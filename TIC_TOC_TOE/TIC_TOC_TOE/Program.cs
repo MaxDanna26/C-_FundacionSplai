@@ -101,13 +101,16 @@ namespace TIC_TOC_TOE
 
                 }
                 ganador = IsWinner(matriz1, matriz2, matriz3);
-                Console.WriteLine(ganador);
                 turno = (!turno);
             } while (ganador != 1 && ganador != -1);
 
+            string winner = "";
+            if (turno == false) winner = player1;
+            else  winner = player2;
+
             if(ganador == 1) 
             {
-                Console.WriteLine("El ganador es : " + (!turno)); 
+                Console.WriteLine("El ganador es : " + (winner)); 
             } 
             else if(ganador == -1)
             {
